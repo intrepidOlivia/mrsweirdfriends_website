@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Mrs. Weird Friends: the Website!</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Mrs. Weird Friends!
+            </h1>
+            <site-navigation>
+                <nav-link href="about.html">
+                    About
+                </nav-link>
+                <nav-link href="shop.html">
+                    Shop
+                </nav-link>
+                <nav-link href="https://old.reddit.com/r/WeirdFriends/">
+                    Community
+                </nav-link>
+                <nav-link href="blog.html">
+                    Blog
+                </nav-link>
+            </site-navigation>
+        </header>
+        <hr />
+        <page-content>
+            <intro>
+                <p>Welcome to the Mrs. Weird Friends website! This is the landing page for the <a href="https://old.reddit.com/r/WeirdFriends/">Weird Friends</a> project, a community for upcycling old plushies and dolls!</p>
+            </intro>
+        </page-content>
+        <footer>
+            <div>(c) MrsWeirdFriends 2023</div>
+            <div>Tell your friends!</div>
+        </footer>
+    </body>
+</html>
+
+<script>
+    customElements.define('nav-link', class NavLink extends HTMLElement{
+        constructor() { super(); }
+        connectedCallback() {
+            this.onclick = () => {
+                const uri = this.getAttribute('href');
+                window.open(uri, '_blank');
+            }
+        }
+    });
+</script>
+
+
+<style>
+    body {
+        padding: 16px 20px;
+    }
+
+    header > h1 {
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    site-navigation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    nav-link {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+
+    page-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    intro {
+        width: 80%;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
