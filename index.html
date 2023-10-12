@@ -3,7 +3,7 @@
         <title>Mrs. Weird Friends: the Website!</title>
     </head>
     <body>
-        <header>
+        <!-- <header>
             <h1>
                 Mrs. Weird Friends!
             </h1>
@@ -21,12 +21,14 @@
                     Blog
                 </nav-link>
             </site-navigation>
-        </header>
-        <hr />
+        </header> -->
+        <!-- <hr /> -->
         <page-content>
-            <intro>
-                <p>Welcome to the Mrs. Weird Friends website! This is the landing page for the <a href="https://old.reddit.com/r/WeirdFriends/">Weird Friends</a> project, a community for upcycling old plushies and dolls!</p>
-            </intro>
+            <img id="roof" src="images/front_roof.png" />
+            <img id="sign" src="images/front_sign.png" />
+            <img id="right_window" src="images/front_right_window.png" />
+            <a id="door" href=""><img  src="images/front_door.png" /></a>
+            <img id="left_window" src="images/front_left_window.png" />
         </page-content>
         <footer>
             <div>(c) MrsWeirdFriends 2023</div>
@@ -101,4 +103,51 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    .storefront {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+    }
+
+    #roof {
+        position: absolute;
+        width: 100%;
+        height: 25%;
+    }
+
+    #door {
+        position: absolute;
+        bottom: 0;
+        width: 33%;
+    }
+
+    #door > img {
+        width: 100%;
+    }
+
+    #sign {
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+
+    #right_window {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 75%;
+    }
+
+    #left_window {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 75%;
+    }
+
 </style>
