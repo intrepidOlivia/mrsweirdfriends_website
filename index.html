@@ -3,26 +3,6 @@
         <title>Mrs. Weird Friends: the Website!</title>
     </head>
     <body>
-        <!-- <header>
-            <h1>
-                Mrs. Weird Friends!
-            </h1>
-            <site-navigation>
-                <nav-link href="about.html">
-                    About
-                </nav-link>
-                <nav-link href="shop.html">
-                    Shop
-                </nav-link>
-                <nav-link href="https://old.reddit.com/r/WeirdFriends/">
-                    Community
-                </nav-link>
-                <nav-link href="blog.html">
-                    Blog
-                </nav-link>
-            </site-navigation>
-        </header> -->
-        <!-- <hr /> -->
         <page-content>
             <img id="roof" src="images/front_roof.png" />
             <img id="sign" src="images/front_sign.png" />
@@ -36,19 +16,6 @@
         </footer>
     </body>
 </html>
-
-<script>
-    customElements.define('nav-link', class NavLink extends HTMLElement{
-        constructor() { super(); }
-        connectedCallback() {
-            this.onclick = () => {
-                const uri = this.getAttribute('href');
-                window.open(uri, '_blank');
-            }
-        }
-    });
-</script>
-
 
 <style>
     body {
@@ -69,12 +36,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-    }
-
-    nav-link {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
     }
 
     page-content {
