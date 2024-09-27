@@ -1,20 +1,51 @@
 <html>
     <head>
         <title>Mrs. Weird Friends: the Website!</title>
-        <script src="routing.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css" />
     </head>
     <body>
-        <page-content>
-            <img id="roof" src="images/front_roof.png" />
-            <img id="sign" src="images/front_sign.png" />
-            <a href="http://www.google.com"><img id="right_window" src="images/front_right_window.png" /></a>
-            <a id="door" href="test_nav.html"><img  src="images/front_door.png" /></a>
-            <img id="left_window" src="images/front_left_window.png" />
-        </page-content>
+        <div id="fullwidth_bodywrapper">
+            <page-content>
+                <!-- <img id="roof" src="images/front_roof.png" />
+                <img id="sign" src="images/front_sign.png" />
+                <img id="right_window" src="images/front_right_window.png" />
+                <a id="door" href=""><img  src="images/front_door.png" /></a>
+                <img id="left_window" src="images/front_left_window.png" /> -->
+                
+                <div id="nav_constellation">
+                    <!-- <div id="title">Weird Friends</div> -->
+                    <div id="title"><img src="images/weirdfriends_banner.jpeg"></img></div>
+                    <a style="top: 6%;left: 28%;" href="about.html">About Me</a>
+                    <a style="top: 0; right:30%;" href="">Link 2</a>
+                    <a style="right:0; top:29%;" href="">Link 3</a>
+                    <a style="bottom: 10%;right: 6%;" href="">Link 4</a>
+                    <a style="bottom:0; right:42%;" href="">Link 5</a>
+                    <a style="bottom: 23%;left: 15%;" href="">Link 6</a>
+                </div>
+            </page-content>
+        </div>
+        <div id="portrait_mode">
+            <img src="images/front_sign.png" />
+            <div>
+                This website is best viewed in landscape mode! Please rotate your device.
+            </div>
+        </div>
         <footer>
             <div>(c) MrsWeirdFriends 2023</div>
             <div>Tell your friends!</div>
         </footer>
     </body>
 </html>
+
+<script>
+    customElements.define('nav-link', class NavLink extends HTMLElement{
+        constructor() { super(); }
+        connectedCallback() {
+            this.onclick = () => {
+                const uri = this.getAttribute('href');
+                window.open(uri, '_blank');
+            }
+        }
+    });
+</script>
+
