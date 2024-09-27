@@ -109,5 +109,9 @@ function selectRandomFromList(list) {
     return list[Math.floor(Math.random() * list.length)];
 }
 
+function refreshPage() {
+    window.location.reload();
+}
+
 populateMadLibs();
 populateImages();

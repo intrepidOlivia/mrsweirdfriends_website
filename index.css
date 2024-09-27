@@ -1,6 +1,7 @@
 body {
     padding: 16px 20px;
     background-color: #0AA190;
+    height: 95vh;
 }
 
 header > h1 {
@@ -166,17 +167,40 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+    height: 25vw;
 }
 
 #about_me_page footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     align-items:center;
     justify-content: space-evenly;
+    background-color: inherit;
+}
+
+#about_me_page page-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+#refreshButton {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#refreshButton:hover {
+    visibility: visible;
+}
+
+.hover_visible {
+    visibility: visible;
 }
 
 #about_text {
@@ -184,16 +208,30 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 50vw;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    #about_text {
+        font-size: 32px;
+        width: 75vw;
+    }
 }
 
 #about_images {
     position: absolute;
-    width: 100%;
+    width: 95vw;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    z-index: -1;
 }
 
 #about_images > img {
-    width: 400px;
+    width: 25vw;
     border-radius: 50%;
-    position: absolute;
+    /* position: absolute; */
 }
