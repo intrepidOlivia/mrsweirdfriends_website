@@ -43,7 +43,7 @@ const LOCATIONS = [
     "An Abandoned Windmill",
     "A Lighthouse that is on Fire",
     "My Digital Home, Everything Made out of Numbers and Code",
-    "Linda’s Basement",
+    "Linda\'s Basement",
     "The Shadow Realm",
 ];
 
@@ -85,7 +85,7 @@ const BANDS = [
     "Of Montreal",
     "Art Vs. Science",
     "The Presets",
-    "I DON’T KNOW HOW BUT THEY FOUND ME",
+    "I DON\'T KNOW HOW BUT THEY FOUND ME",
     "The Avalanches",
     "Fujiya & Miyagi",
     "Freelance Whales",
@@ -139,7 +139,7 @@ const AWARDS = [
     "Awards for Excellence in Excellence",
     "The Golden Globe for Best Golden Globe",
     "Best Impromptu Speaking",
-    "World’s Worst Dad",
+    "World\'s Worst Dad",
     "Being the Silliest Goose",
     "Calling it a Comeback",
     "Best Roadtrip Playlist",
